@@ -9,7 +9,6 @@
     <!-- Bootstrap JavaScript -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
     <link rel="stylesheet" href=""/>
-    <link href="/css/styles.css" rel="stylesheet" />
     <title>LevelUp</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -19,7 +18,7 @@
     <link rel="shortcut icon" href="/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="/favicon/browserconfig.xml">
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js' ,'resources/css/styles.css'])
     
 </head>
 
@@ -201,8 +200,8 @@
             </div>
         </div>
     </div>
-    <footer class="d-flex bg-dark flex-wrap justify-content-between align-items-center py-3 mt-4 border-top">
-        <p class="col-md-4 ml-3 text-light mb-0 text-body-secondary">
+    <footer class="d-flex bg-dark  flex-wrap justify-content-between align-items-center py-3 mt-4 border-top">
+        <p class="col-md-4 ml-3 text-white mb-0 ">
             © 2023 LevelUp, Inc
         </p>
 
@@ -211,21 +210,21 @@
             <img src="/images/logo_transparent.png" alt="logo" width="80px" height="100px" />
         </a>
 
-        <ul class="nav col-md-4 justify-content-end">
+        <ul class="nav  col-md-4 justify-content-end">
             <li class="nav-item">
-                <a href="{{url('/')}}" class="nav-link px-2 text-body-secondary">Home</a>
+                <a href="{{url('/')}}" class="nav-link px-2  ">Home</a>
             </li>3
             <li class="nav-item">
-                <a href="#" class="nav-link px-2 text-body-secondary">Courses</a>
+                <a href="#" class="nav-link px-2 ">Courses</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link px-2 text-body-secondary">Quizzes</a>
+                <a href="#" class="nav-link px-2 ">Quizzes</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link px-2 text-body-secondary">About Us</a>
+                <a href="#" class="nav-link px-2 ">About Us</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link px-2 text-body-secondary">FAQ</a>
+                <a href="#" class="nav-link px-2 ">FAQ</a>
             </li>
         </ul>
     </footer>
