@@ -1,0 +1,11 @@
+.body{
+    background-color: #ccc;
+}
+.card-body{
+    background-color: #e4e3e3;
+  /* margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5%;
+  padding:10px;
+  border-radius: 10px; */
+}
