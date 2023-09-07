@@ -1,11 +1,20 @@
-.body{
+html{
+    margin: 0px;
+    padding: 0px;
+}
+.body {
     background-color: #ccc;
 }
-.card-body{
+.card-body {
     background-color: #e4e3e3;
-  /* margin-left: 20%;
-  margin-right: 20%;
-  margin-top: 5%;
-  padding:10px;
-  border-radius: 10px; */
 }
+.sign-img {
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+}
+ .nav-item> a {
+    margin-left: 10px;
+    margin-right: 10px;
+  color: #fff;
+  }

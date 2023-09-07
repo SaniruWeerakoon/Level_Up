@@ -84,7 +84,7 @@
                                 style="color:aliceblue">Profile</a>
                         @else
                             <a href="{{ route('login') }}"
-                                class="m-4 bg-primary text-white font-weight-bold rounded px-3 py-2 "
+                                class="my-4 mx-2  bg-primary text-white font-weight-bold rounded px-3 py-2 "
                                 style="color:aliceblue">Log in</a>
 
                             @if (Route::has('register'))

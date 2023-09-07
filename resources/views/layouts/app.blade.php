@@ -28,7 +28,7 @@
 </head>
 
 <body class="body">
-    <div id="app">
+    <div id="app" >
         <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -62,13 +62,13 @@
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
-                                <li class="nav-item">
+                                <li class="nav-item m-2 bg-primary rounded">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
-                                <li class="nav-item">
+                                <li class="nav-item  m-2 bg-primary rounded">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
@@ -101,6 +101,35 @@
             @yield('content')
         </main>
     </div>
+    <footer class="d-flex bg-dark fixed-bottom flex-wrap justify-content-between align-items-center py-2 mt-5 border-top">
+        <p class="col-md-4 ml-3 text-white mb-0 px-3 ">
+            © 2023 LevelUp, Inc
+        </p>
+    
+        <a href="/"
+            class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <img src="/images/logo_transparent.png" alt="logo" width="80px" height="100px" />
+        </a>
+    
+        <ul class="nav  col-md-4 justify-content-end">
+            <li class="nav-item">
+                <a href="{{url('/')}}" class="nav-link px-2  ">Home</a>
+            </li>3
+            <li class="nav-item">
+                <a href="#" class="nav-link px-2 ">Courses</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link px-2 ">Quizzes</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link px-2 ">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link px-2 ">FAQ</a>
+            </li>
+        </ul>
+    </footer>
 </body>
+
 
 </html>
