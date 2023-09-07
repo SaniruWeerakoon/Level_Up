@@ -201,7 +201,7 @@
         </div>
     </div>
     <footer class="d-flex bg-dark  flex-wrap justify-content-between align-items-center py-3 mt-4 border-top">
-        <p class="col-md-4 ml-3 text-white mb-0 ">
+        <p class="col-md-4 px-3 text-white mb-0 ">
             © 2023 LevelUp, Inc
         </p>
 
