@@ -1,52 +1,94 @@
-.intro {
+/* .intro {
   width: 1000px;
   height: 310px;
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 7%;
   text-align: center;
-}
+} */
 .intro > p {
-  text-align: center;
-  font-family: Inconsolata;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+    text-align: center;
+    font-family: Inconsolata;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
 
-.course,
-.quiz {
-  margin-left: 10%;
-  display: flex;
-  flex-direction: row;
-}
 .card {
-  padding: 20px;
-  margin: 20px;
-  border-radius: 10px;
-  background-color: #e4e3e3;
+    border-radius: 10px;
+    background-color: #e4e3e3;
 }
-.card>img{
-  max-width:100%;
-  height: 100%;
-  border-radius: 10px;
+.card > img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
 body {
-  background-color: #ccc;
+    background-color: #ccc;
 }
 
-.nav-item> a {
-  margin-left: 10px;
-  margin-right: 10px;
-  font-size: 17px;
-color: #fff;
+.nav-item > a {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 17px;
+    color: #fff;
 }
 a {
-  text-decoration: none; /* Remove underline */
+    text-decoration: none; /* Remove underline */
 }
-.search{
-  width:300px;
-  margin-left: 40%;
-  text-align: center;
+
+/* Styles for small screens (576px and below) */
+@media only screen and (max-width: 576px) {
+    .intro > p {
+        font-size: 20px;
+    }
+    .course,
+    .quiz {
+        margin-left: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card {
+        padding: 20px;
+        margin: 20px;
+        width: auto;
+    }
+    footer > a > img {
+        width: 60px;
+        height: 78px;
+    }
+    
 }
+
+/* Styles for medium screens (768px and above 577) */
+@media (min-width: 577px)  {
+    .intro {
+        /* width: 1000px; */
+        height: 310px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 7%;
+        text-align: center;
+    }
+    .intro > p {
+      font-size: 30px;
+  }
+    .course,
+    .quiz {
+        margin-left: 10%;
+        display: flex;
+        flex-direction: row;
+    }
+    .card {
+      padding: 20px;
+      margin: 20px;
+      width: auto;
+  }
+  footer > a > img {
+    width: 80px;
+    height: 100px;
+}
+}
+

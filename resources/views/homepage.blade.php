@@ -8,7 +8,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <!-- Bootstrap JavaScript -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
-    <link rel="stylesheet" href=""/>
+    <link rel="stylesheet" href="" />
     <title>LevelUp</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -18,8 +18,8 @@
     <link rel="shortcut icon" href="/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="/favicon/browserconfig.xml">
-    @vite(['resources/sass/app.scss', 'resources/js/app.js' ,'resources/css/styles.css'])
-    
+    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/styles.css'])
+
 </head>
 
 <body>
@@ -98,16 +98,18 @@
             </div>
         </div>
     </nav>
-    <div class="intro">
+    <div class="intro mt-3">
         <p>
             Welcome to LevelUp: Elevate Your Learning Journey <br />
             <i> Where Curiosity Meets Mastery </i>
         </p>
         <br />
-        <form class="d-flex search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button class="btn btn-success" type="submit">Search</button>
-        </form>
+        <div class="d-flex justify-content-center align-items-center">
+            <form class="d-flex search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+        </div>
         <br />
         <p>
             Unlock your full potential with LevelUp, the ultimate destination for
@@ -200,19 +202,20 @@
             </div>
         </div>
     </div>
-    <footer class="d-flex bg-dark  flex-wrap justify-content-between align-items-center py-3 mt-4 border-top">
+    
+    <footer class="d-flex bg-dark flex-wrap justify-content-between align-items-center py-3 mt-4 border-top">
         <p class="col-md-4 px-3 text-white mb-0 ">
             © 2023 LevelUp, Inc
         </p>
 
-        <a href="/"
+        <a href="{{url('/')}}"
             class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <img src="/images/logo_transparent.png" alt="logo" width="80px" height="100px" />
+            <img src="/images/logo_transparent.png" alt="logo"  />
         </a>
 
         <ul class="nav  col-md-4 justify-content-end">
             <li class="nav-item">
-                <a href="{{url('/')}}" class="nav-link px-2  ">Home</a>
+                <a href="{{ url('/') }}" class="nav-link px-2  ">Home</a>
             </li>3
             <li class="nav-item">
                 <a href="#" class="nav-link px-2 ">Courses</a>
