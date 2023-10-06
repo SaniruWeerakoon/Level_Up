@@ -50,7 +50,7 @@
                             <div class="row mb-3">
                                 <label for="password" class="col-md-2 col-form-label">Password</label>
                                 <div class="col-md-8">
-                                    <input type="password" class="form-control" id="password" name="password" />
+                                    <input type="password" class="form-control" id="password" name="password" required />
                                     @error('password')
                                         <div class="text-danger">{{ $message }}</div>
                                     @enderror
