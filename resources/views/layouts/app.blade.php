@@ -24,11 +24,12 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     {{-- <link href="/css/appblade.css" rel="stylesheet"> --}}
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js','resources/css/appblade.css'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/appblade.css'])
+    @livewireStyles
 </head>
 
-<body class="body">
-    <div id="app" >
+<body class="body" style="display: flex; flex-direction: column; min-height: 100vh;">
+    <div id="app" style="flex: 1;">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -47,7 +48,7 @@
                             <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Courses</a>
+                            <a class="nav-link" href="{{ route('courses.index') }}">Courses</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Quizzes</a>
@@ -55,6 +56,14 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Tutorials</a>
                         </li>
+                        {{-- //conevrt --}}
+                        @auth
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('enrollments.index') }}">My Courses</a>
+                            </li>
+                        @endauth
+
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -63,16 +72,21 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item m-2 bg-primary rounded">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }} &nbsp;&nbsp;<i
+                                            class="fas fa-sign-in-alt"></i></a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item  m-2 bg-primary rounded">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }} &nbsp;&nbsp;<i
+                                            class="fas fa-user-plus"></i></a>
                                 </li>
                             @endif
                         @else
+                            {{-- <a href="{{ url('/profile') }}"
+                                class="m-1 bg-primary text-white font-weight-bold rounded px-3 py-2 "
+                                style="color:aliceblue">Profile &nbsp;&nbsp;<i class="fas fa-user"></i></a> --}}
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -80,12 +94,16 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('profile') }}">
+                                        {{ __('Profile') }}
+                                    </a>
+                            
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-
+                            
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
@@ -101,22 +119,23 @@
             @yield('content')
         </main>
     </div>
-    <footer class="d-flex bg-dark fixed-bottom flex-wrap justify-content-between align-items-center py-2 mt-5 border-top">
+    <footer class="d-flex bg-dark  flex-wrap justify-content-between align-items-center py-2 mt-5 border-top"
+        style="flex-shrink: 0;">
         <p class="col-md-4 ml-3 text-white mb-0 px-3 ">
             © 2023 LevelUp, Inc
         </p>
-    
+
         <a href="/"
             class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
             <img src="/images/logo_transparent.png" alt="logo" width="80px" height="100px" />
         </a>
-    
+
         <ul class="nav  col-md-4 justify-content-end">
             <li class="nav-item">
-                <a href="{{url('/')}}" class="nav-link px-2  ">Home</a>
+                <a href="{{ url('/') }}" class="nav-link px-2  ">Home</a>
             </li>3
             <li class="nav-item">
-                <a href="#" class="nav-link px-2 ">Courses</a>
+                <a href="{{ route('courses.index') }}" class="nav-link px-2 ">Courses</a>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link px-2 ">Quizzes</a>
@@ -129,6 +148,7 @@
             </li>
         </ul>
     </footer>
+    @livewireScripts
 </body>
 
 

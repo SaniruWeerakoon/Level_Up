@@ -35,10 +35,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Home  </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Courses</a>
+                        <a class="nav-link" href="{{ route('courses.index') }}">Courses</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Quizzes</a>
@@ -46,6 +46,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Tutorials</a>
                     </li>
+                    @can('accessCreateCourses')
+                        <li class="nav-item">
+                            <a href="{{ route('courses.create') }}" class="nav-link" style="color:aliceblue">Add Courses <i
+                                    class="fas fa-plus"></i></a>
+                        </li>
+                    @endcan
+
                     {{-- <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
@@ -79,18 +86,32 @@
                 @if (Route::has('login'))
                     <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
                         @auth
+                            {{-- @can('accessCreateCourses')
+                                <a href="{{ route('courses.create') }}"
+                                    class="m-4 bg-primary text-white font-weight-bold rounded px-3 py-2 "
+                                    style="color:aliceblue">Add Courses</a>
+                            @endcan --}}
+                            {{-- <a href="{{ route('courses.index') }}"
+                                class="m-4 bg-primary text-white font-weight-bold rounded px-3 py-2 "
+                                style="color:aliceblue">Courses</a> --}}
+
+                            {{-- <a href="{{ route('enrollments.index') }}"
+                                class="m-4 bg-primary text-white font-weight-bold rounded px-3 py-2"
+                                style="color:aliceblue">My Courses</a> --}}
+
+
                             <a href="{{ url('/profile') }}"
                                 class="m-4 bg-primary text-white font-weight-bold rounded px-3 py-2 "
-                                style="color:aliceblue">Profile</a>
+                                style="color:aliceblue">Profile &nbsp;&nbsp;<i class="fas fa-user"></i></a>
                         @else
                             <a href="{{ route('login') }}"
                                 class="my-4 mx-2  bg-primary text-white font-weight-bold rounded px-3 py-2 "
-                                style="color:aliceblue">Log in</a>
+                                style="color:aliceblue">Log in &nbsp;&nbsp;<i class="fas fa-sign-in-alt"></i></a>
 
                             @if (Route::has('register'))
                                 <a href="{{ route('register') }}"
                                     class="m-2 bg-primary text-white font-weight-bold rounded px-3 py-2 "
-                                    style="color:aliceblue">Register</a>
+                                    style="color:aliceblue">Register &nbsp;&nbsp;<i class="fas fa-user-plus"></i></a>
                             @endif
                         @endauth
                     </div>
@@ -202,15 +223,15 @@
             </div>
         </div>
     </div>
-    
+
     <footer class="d-flex bg-dark flex-wrap justify-content-between align-items-center py-3 mt-4 border-top">
         <p class="col-md-4 px-3 text-white mb-0 ">
             © 2023 LevelUp, Inc
         </p>
 
-        <a href="{{url('/')}}"
+        <a href="{{ url('/') }}"
             class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <img src="/images/logo_transparent.png" alt="logo"  />
+            <img src="/images/logo_transparent.png" alt="logo" />
         </a>
 
         <ul class="nav  col-md-4 justify-content-end">

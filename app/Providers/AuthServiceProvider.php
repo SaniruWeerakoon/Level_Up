@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
-// use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
-
+use App\Enums\UserRole;
 class AuthServiceProvider extends ServiceProvider
 {
     /**
@@ -21,6 +21,13 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // // create a gate as accessModerator
+        // Gate::define('accessModerator', function () {
+        //     return auth()->check() && auth()->user()->role_id === 2;
+        // });
+
+        Gate::define('accessCreateCourses',function (){
+            return auth()->check() && in_array(auth()->user()->role_id, [UserRole::SuperAdministrator, UserRole::Moderator]) ;
+        });
     }
 }
