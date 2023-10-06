@@ -13,7 +13,14 @@
     font-weight: 600;
     line-height: normal;
 }
-
+.intro {
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #e4e3e3;
+}
+.search{
+    border-color: black;
+}
 .card {
     border-radius: 10px;
     background-color: #e4e3e3;
@@ -59,11 +66,10 @@ a {
         width: 60px;
         height: 78px;
     }
-    
 }
 
 /* Styles for medium screens (768px and above 577) */
-@media (min-width: 577px)  {
+@media (min-width: 577px) {
     .intro {
         /* width: 1000px; */
         height: 310px;
@@ -73,8 +79,8 @@ a {
         text-align: center;
     }
     .intro > p {
-      font-size: 30px;
-  }
+        font-size: 30px;
+    }
     .course,
     .quiz {
         margin-left: 10%;
@@ -82,13 +88,12 @@ a {
         flex-direction: row;
     }
     .card {
-      padding: 20px;
-      margin: 20px;
-      width: auto;
-  }
-  footer > a > img {
-    width: 80px;
-    height: 100px;
+        padding: 20px;
+        margin: 20px;
+        width: auto;
+    }
+    footer > a > img {
+        width: 80px;
+        height: 100px;
+    }
 }
-}
-

@@ -127,7 +127,7 @@
         <br />
         <div class="d-flex justify-content-center align-items-center">
             <form class="d-flex search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <input class="form-control me-2 search"  type="search" placeholder="Search" aria-label="Search" />
                 <button class="btn btn-success" type="submit">Search</button>
             </form>
         </div>
