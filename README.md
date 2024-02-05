@@ -38,8 +38,39 @@ Visit `http://localhost:8000` in your browser to explore the platform.
 
 ## Screenshots
 
+Here are some screenshots of the LevelUp platform:
 
+![Home](screenshots_readme/Home.jpg)
 
+*Caption: Overview of the home page.*
+
+![Home_2](screenshots_readme/Home_2.jpg)
+
+*Caption: Another view of the home page.*
+
+![Sign In](screenshots_readme/sign_in.jpg)
+
+*Caption: Sign-in page for user authentication.*
+
+![Dashboard Profile](screenshots_readme/Dashboard_profile.jpg)
+
+*Caption: User dashboard displaying profile information.*
+
+![Dashboard API](screenshots_readme/Dashboard_API.jpg)
+
+*Caption: User dashboard with API token details.(Only available for moderators and adminiistrators*
+
+![Dashboard Bills](screenshots_readme/Dashboard_Bills.jpg)
+
+*Caption: User dashboard showing billing information.*
+
+![Courses Index](screenshots_readme/Courses_index.jpg)
+
+*Caption: Index page displaying a list of available courses.*
+
+![Courses Display](screenshots_readme/Courses_display.jpg)
+
+*Caption: Detailed view of a specific course.*
 
 
 
