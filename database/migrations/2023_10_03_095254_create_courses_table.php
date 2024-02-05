@@ -13,11 +13,22 @@ return new class extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('title')->unique();;
             $table->text('description');
             $table->string('subject');
             $table->string('difficulty');
             $table->decimal('price', 8, 2);
+
+            $table->unsignedBigInteger('author_id');
+            $table->foreign('author_id')->references('id')->on('users')->onDelete('cascade');
+
+            $table->string('type');
+            $table->text('content');
+            $table->string('estimated_length');
+            $table->string('course_image_path')->nullable();
+            $table->tinyInteger('ratings')->nullable();
+            $table->integer('completed_by')->nullable();
+            $table->boolean('hidden')->default(false);
             $table->timestamps();
         });
     }

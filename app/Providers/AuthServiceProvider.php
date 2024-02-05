@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use App\Enums\UserRole;
+
 class AuthServiceProvider extends ServiceProvider
 {
     /**
@@ -26,8 +27,15 @@ class AuthServiceProvider extends ServiceProvider
         //     return auth()->check() && auth()->user()->role_id === 2;
         // });
 
-        Gate::define('accessCreateCourses',function (){
-            return auth()->check() && in_array(auth()->user()->role_id, [UserRole::SuperAdministrator, UserRole::Moderator]) ;
+        Gate::define('accessCourses', function () {
+            return auth()->check() && in_array(auth()->user()->role_id, [UserRole::SuperAdministrator, UserRole::Moderator]);
         });
+        Gate::define('accessAdmin', function () {
+            return auth()->check() && in_array(auth()->user()->role_id, [UserRole::SuperAdministrator]);
+        });
+        Gate::define('accessStudent', function () {
+            return auth()->check() && in_array(auth()->user()->role_id, [UserRole::Student]);
+        });
+
     }
 }

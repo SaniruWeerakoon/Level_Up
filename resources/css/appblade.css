@@ -1,28 +1,67 @@
-html{
+html {
     margin: 0px;
     padding: 0px;
 }
 .body {
-    background-color: #ccc;
+    background-color: #FFFFFF;
 }
 .card-body {
-    background-color: #e4e3e3;
+    background-color: rgb(240, 240, 240);
 }
 .sign-img {
     display: flex;
     flex-direction: row;
     border-radius: 10px;
 }
- .nav-item> a {
-    margin-left: 10px;
-    margin-right: 10px;
-  color: #fff;
-  font-size: 17px;
-  }
+.nav-item > a {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #3b3737;
+    font-size: 17px;
+}
 
-  @media (min-width:768px) and (max-width: 992px)  {
-    .sign-img>img{
+@media (min-width: 768px) and (max-width: 992px) {
+    .sign-img > img {
         width: 200px;
         height: 200px;
     }
-  }
+}
+
+.btn-warning {
+    padding: 0.688rem 1.563rem;
+    background-color: #ff9900;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.btn-warning:hover {
+    padding: 0.688rem 1.563rem;
+    background-color: #eb8f04;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.btn-secondary-outline {
+    padding: 0.688rem 1.563rem;
+    border: 1px solid rgb(172, 172, 172);
+    font-weight: bold;
+    font-size: 1rem;
+}
+.btn-secondary-outline:hover {
+    padding: 0.688rem 1.563rem;
+    border: 1px solid rgb(172, 172, 172);
+
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #f0efef;
+}
+.fs-2 {
+    font-size: 1.26563rem !important;
+}
+
+.link-900 {
+    font-size: 1rem;
+}
+.nav-item > a:hover {
+    color: #ff9900;
+}

@@ -13,7 +13,9 @@ class RoleValidationMiddleware
     /**
      * Handle an incoming request.
      *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+     * @param Request $request
+     * @param \Closure(Request): (Response) $next
+     * @return Response
      */
     public function handle(Request $request, Closure $next): Response
     {
@@ -22,9 +24,9 @@ class RoleValidationMiddleware
             return redirect()->route('login');
         }
 
-        // check if the user has the role of moderator
-        if ($request->user()->role_id !== UserRole::Moderator) {
-            
+        // check if the user has the role of moderator or super  admin
+        if ($request->user()->role_id !== UserRole::Moderator && $request->user()->role_id !== UserRole::SuperAdministrator) {
+
             // dd($request->user()->role_id);
             abort(403, 'You are not authorized to access this page.');
         }

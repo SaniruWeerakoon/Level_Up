@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    border-right: 1px solid #e0e0e0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom, #ffffff, #f8f8f8, #f8f8f8, #ffffff);
+}
+
+.fas {
+    color: #FF9900;
+}
+
+ .nav-item>.active {
+    background: linear-gradient(to right, #e0e0e0, #f8f8f8);
+    border-left: 3px solid #007bff;
+    color: #000;
+}

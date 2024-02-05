@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+//use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -12,6 +13,7 @@ use App\Enums\UserRole;
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
+
 
     /**
      * The attributes that are mass assignable.
@@ -24,6 +26,14 @@ class User extends Authenticatable
         'password',
         'username',
         'role_id',
+        'profile_image_path',
+        'mobile',
+        'designation',
+        'gender',
+        'birthday',
+        'skill_level',
+        'progress',
+        'last_login'
     ];
 
     /**
@@ -46,4 +56,14 @@ class User extends Authenticatable
         'password' => 'hashed',
         'role_id' => UserRole::class,
     ];
+
+    public static function getTotalRegisteredUsers(): int
+    {
+        return self::count();
+    }
+
+    public function notifications(): HasMany
+    {
+        return $this->hasMany(Notification::class, 'receiver_id');
+    }
 }
