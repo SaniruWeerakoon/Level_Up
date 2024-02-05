@@ -26,7 +26,7 @@ Before you begin, ensure you have met the following requirements:
 
 To get started with the LevelUp, follow these simple steps:
 
-1. Clone the repository: `git clone https://github.com/SaniruWeerakoon/freelancer_project.git`
+1. Clone the repository: `git clone https://github.com/SaniruWeerakoon/Level_Up.git`
 2. Install dependencies: `composer install`
 3. Install Node.js dependencies: `npm install`
 4. Set up the database: `php artisan migrate`
