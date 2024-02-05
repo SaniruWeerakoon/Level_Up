@@ -1,66 +1,49 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# LevelUp
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Welcome to LevelUp – a cutting-edge education solution that empowers learners with flexibility, interactivity, and a diverse range of courses. Whether you're a student looking to master new skills, an instructor aiming to share knowledge, or a professional seeking continuous improvement, LevelUp is here to help you reach new heights.
 
-## About Laravel
+## Problem & Solution
+Traditional education systems lack flexibility and accessibility, making it difficult for learners to access quality education at their convenience. LevelUp provides a diverse range of courses accessible anytime, anywhere. It offers interactive lessons, personalized learning paths, and engaging multimedia content to cater to various learning styles.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Flexible Learning Paths:** Access courses anytime, anywhere, with personalized learning paths tailored to individual preferences.
+- **Interactive Lessons:** Engage in interactive lessons, quizzes, and assignments that cater to various learning styles.
+- **Diverse Course Catalog:** Explore a wide range of subjects, including Math, Science, Computer Science, and etc.
+- **Subscription Plans:** Choose from different subscription plans, including monthly and yearly options, for a seamless learning experience.
+- **User-friendly Interface:** Enjoy a user-friendly interface with easy navigation and customization of user preferences.
+- **Secure Payments:** Make secure payments for subscription plans or one-time course fees.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Prerequisites
 
-## Learning Laravel
+Before you begin, ensure you have met the following requirements:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **PHP:** Ensure you have PHP installed on your machine. You can download PHP from [here](https://www.php.net/downloads).
+- **Composer:** Composer is a dependency manager for PHP. You can install it by following the instructions [here](https://getcomposer.org/download/).
+- **Node.js and npm:** Node.js is used for managing frontend dependencies. Install Node.js and npm from [here](https://nodejs.org/).
+  
+## Installation
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+To get started with the LevelUp, follow these simple steps:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. Clone the repository: `git clone https://github.com/SaniruWeerakoon/freelancer_project.git`
+2. Install dependencies: `composer install`
+3. Install Node.js dependencies: `npm install`
+4. Set up the database: `php artisan migrate`
+5. Seed the database with sample data: `php artisan db:seed`
+6. Compile frontend assets: `npm run dev`
+7. Run the development server: `php artisan serve`
 
-## Laravel Sponsors
+Visit `http://localhost:8000` in your browser to explore the platform.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Screenshots
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+Happy Learning! 🚀✨
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
