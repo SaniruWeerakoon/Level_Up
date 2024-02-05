@@ -44,9 +44,11 @@ Here are some screenshots of the LevelUp platform:
 
 *Caption: Overview of the home page.*
 
+
 ![Home_2](screenshots_readme/Home_2.jpg)
 
 *Caption: Another view of the home page.*
+
 
 ![Sign In](screenshots_readme/sign_in.jpg)
 
