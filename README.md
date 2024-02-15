@@ -60,12 +60,6 @@ Here are some screenshots of the LevelUp platform:
 *Caption: Detailed view of a specific course.*
 
 
-
-
-
-*Caption: Sign-in page for user authentication.*
-
-
 ## Introduction
 Welcome to LevelUp – a cutting-edge education solution that empowers learners with flexibility, interactivity, and a diverse range of courses. Whether you're a student looking to master new skills, an instructor aiming to share knowledge, or a professional seeking continuous improvement, LevelUp is here to help you reach new heights.
 
@@ -81,6 +75,8 @@ Traditional education systems lack flexibility and accessibility, making it diff
 - **User-friendly Interface:** Enjoy a user-friendly interface with easy navigation and customization of user preferences.
 - **Secure Payments:** Make secure payments for subscription plans or one-time course fees.
 
+
+## More Screenshots
 
 
 
