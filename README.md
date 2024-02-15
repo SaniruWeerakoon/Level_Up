@@ -15,10 +15,11 @@ To get started with the LevelUp, follow these simple steps:
 1. Clone the repository: `git clone https://github.com/SaniruWeerakoon/Level_Up.git`
 2. Install dependencies: `composer install`
 3. Install Node.js dependencies: `npm install`
-4. Set up the database: `php artisan migrate`
-5. Seed the database with sample data: `php artisan db:seed`
-6. Compile frontend assets: `npm run dev`
-7. Run the development server: `php artisan serve`
+4. Update an env and connect a database 
+5. Set up the database: `php artisan migrate`
+6. Seed the database with sample data: `php artisan db:seed`
+7. Compile frontend assets: `npm run dev`
+8. Run the development server: `php artisan serve`
 
 Visit `http://localhost:8000` in your browser to explore the platform.
 
@@ -53,7 +54,8 @@ Here are some screenshots of the LevelUp platform:
 
 *Caption: Index page displaying a list of available courses.*
 
-![Courses_display](https://github.com/SaniruWeerakoon/Level_Up/assets/113242751/423ac14d-93a5-4376-8ab6-dc055cc7c97e)
+![Courses_display](https://github.com/SaniruWeerakoon/Level_Up/assets/113242751/4149bf6a-e915-46ca-abce-e497f8b60e76)
+
 
 *Caption: Detailed view of a specific course.*
 
